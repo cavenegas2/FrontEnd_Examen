@@ -1,0 +1,31 @@
+<h3>Listado de Vinculacion</h3>
+<table class="table table-hovered">
+    <thead>
+        <tr>
+            <th>N°</th>
+            <th>Nombre</th>
+            <th>Horas</th>
+            <th>Lugar</th>
+            <th>Coordinador</th>
+            <th>
+                <button [routerLink]="['/vinculacion/form']" class="btn btn-info" ><fa-icon [icon]="faPlus"></fa-icon>&nbsp;Agregar</button>                    
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of vinculacion; let i = index">
+            <td>{{i|masmas}}</td>
+            <td>{{item.nombre_proyecto}}</td>
+            <td>{{item.horas}}</td>
+            <td>{{item.lugar }}</td>
+            <td>{{ item.coordinador }}</td>
+            <td>
+                <button [routerLink]="['/vinculacion/card', item.idvinculacion]" class="btn btn-sm btn-info" ><fa-icon [icon]="faEye"></fa-icon></button>                    
+                <button [routerLink]="['/vinculacion/form', item.idvinculacion]" class="btn btn-sm btn-warning" ><fa-icon [icon]="faPencilAlt"></fa-icon></button>
+                <button (click)="delete(item)" class="btn btn-sm btn-danger" ><fa-icon [icon]="faTrash"></fa-icon></button>
+            </td>
+        </tr>
+
+    </tbody>
+
+</table>

@@ -1,0 +1,16 @@
+<h3>{{title}}</h3>
+<br><br><br><br>
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="user">
+<fieldset>
+    <label>Nombre del proyecto:</label>
+    <input formControlName="nombre_proyecto" [(ngModel)]="vinculacion.nombre_proyecto" type="text"  /><br>
+    <label>Lugar:</label>
+    <input formControlName="lugar" [(ngModel)]="vinculacion.lugar" type="text" /><br>
+    <label>Horas:</label>
+    <input formControlName="horas" [(ngModel)]="vinculacion.horas"  type="number" /><br>
+    <label>Coordinador:</label>
+    <input formControlName="coordinador" [(ngModel)]="vinculacion.coordinador" type="text"  /><br>
+    <button type="submit">Guardar</button><br>
+    <button type="reset" (click)="onReset()">Cancelar</button><br>
+</fieldset>
+</form>

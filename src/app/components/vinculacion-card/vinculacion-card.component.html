@@ -1,0 +1,12 @@
+<h3>{{vinculacion.nombre_proyecto | uppercase }}</h3>
+<fieldset>
+    <label><strong>Nombre:</strong></label>&nbsp;
+    <span>{{vinculacion.nombre_proyecto}}</span><br>
+    <label>Horas:</label>&nbsp;
+    <span>{{vinculacion.horas}}</span><br>
+    <label>Lugar:</label>&nbsp;
+    <span>{{vinculacion.lugar }}</span><br>
+    <label>Coordinador:</label>&nbsp;
+    <span>{{vinculacion.coordinador}}</span><br>
+    <button [routerLink]="['/vinculacion/list']" class="btn btn-info" ><fa-icon [icon]="faListAlt"></fa-icon>&nbsp;Volver</button>                    
+</fieldset>
